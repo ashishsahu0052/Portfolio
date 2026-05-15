@@ -33,8 +33,7 @@ const Contact = () => {
       e.email = "Invalid email";
 
     if (!form.message.trim()) e.message = "Message is required";
-    else if (form.message.trim().length < 10)
-      e.message = "Message too short";
+    else if (form.message.trim().length < 10) e.message = "Message too short";
 
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -81,8 +80,8 @@ const Contact = () => {
           </h2>
 
           <p className="mt-6 text-gray-400 max-w-md text-lg">
-            Have an opportunity or project in mind?
-            Send a quick message - I usually respond within 24 hours.
+            Have an opportunity or project in mind? Send a quick message - I
+            usually respond within 24 hours.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -111,6 +110,25 @@ const Contact = () => {
                 <p className="font-medium text-gray-200">LinkedIn</p>
                 <p className="text-sm text-gray-400">Let’s connect</p>
               </div>
+              <ExternalLink className="ml-auto opacity-60" />
+            </motion.a>
+            <motion.a
+              whileHover={{ x: 6 }}
+              href="https://contra.com/aditya_raj_srivastava_vgiys102?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=aditya_raj_srivastava_vgiys102"
+              target="_blank"
+              className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
+            >
+              <div className="w-10 h-10 rounded-lg bg-white text-black flex items-center justify-center font-bold">
+                C
+              </div>
+
+              <div>
+                <p className="font-medium text-gray-200">Contra</p>
+                <p className="text-sm text-gray-400">
+                  Hire me for freelance projects
+                </p>
+              </div>
+
               <ExternalLink className="ml-auto opacity-60" />
             </motion.a>
           </div>
@@ -179,6 +197,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Contact;
