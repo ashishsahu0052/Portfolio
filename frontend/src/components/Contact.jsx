@@ -5,7 +5,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
-console.log("API Base URL:", API_BASE);
+//console.log("API Base URL:", API_BASE);
 
 const fade = {
   hidden: { opacity: 0, y: 25 },
@@ -52,7 +52,7 @@ const Contact = () => {
     if (!validate()) return;
 
     setLoading(true);
-    console.log("Submitting to:", `${API_BASE}/send-email`);
+    //console.log("Submitting to:", `${API_BASE}/send-email`);
 
     try {
       const res = await fetch(`${API_BASE}/send-email`, {

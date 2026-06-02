@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://portfolio-six-umber-90.vercel.app/",
+  "https://portfolio-six-umber-90.vercel.app",
 ];
 
 app.use(
@@ -32,6 +32,8 @@ app.get("/", (req, res) => {
 });
 app.use(express.json());
 //console.log(process.env.RESEND_API_KEY);
+
+console.log("server is ruunig ");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
