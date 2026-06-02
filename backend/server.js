@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://portfolio-kappa-dun-5qf2xhrgag.vercel.app",
+  "https://portfolio-six-umber-90.vercel.app/",
 ];
 
 app.use(
