@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://portfolio-lilac-eight-33.vercel.app",
+  "https://portfolio-kappa-dun-5qf2xhrgag.vercel.app",
 ];
 
 app.use(
@@ -48,7 +48,7 @@ app.post("/send-email", async (req, res) => {
         <p>${message}</p>
       `,
     });
-    console.log(data);
+    // console.log(data);
 
     res.json({ success: true });
   } catch (err) {
