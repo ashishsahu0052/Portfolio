@@ -52,6 +52,7 @@ const Contact = () => {
     if (!validate()) return;
 
     setLoading(true);
+    console.log("Submitting to:", `${API_BASE}/send-email`);
 
     try {
       const res = await fetch(`${API_BASE}/send-email`, {
@@ -69,6 +70,7 @@ const Contact = () => {
     } finally {
       setLoading(false);
     }
+    // console.log("Resend Response:", result);
   };
 
   return (
