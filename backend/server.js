@@ -27,6 +27,9 @@ app.use(
   }),
 );
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 app.use(express.json());
 console.log(process.env.RESEND_API_KEY);
 
