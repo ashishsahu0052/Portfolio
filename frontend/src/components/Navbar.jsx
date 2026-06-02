@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const sections = ["about", "stack", "projects", "contact"];
+const sections = ["About", "Stack", "Projects", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
 
       if (currentY > lastScrollY.current && currentY > 120) {
         setHidden(true);
-        setMobileMenuOpen(false); 
+        setMobileMenuOpen(false);
       } else {
         setHidden(false);
       }
@@ -41,7 +41,7 @@ const Navbar = () => {
       {
         rootMargin: "-40% 0px -55% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sections.forEach((id) => {
@@ -53,18 +53,18 @@ const Navbar = () => {
 
   const scrollToTop = (e) => {
     e.preventDefault();
-    setMobileMenuOpen(false); 
+    setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToSection = (id, e) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    
+
     const el = document.getElementById(id);
     if (!el) return;
 
-    const NAVBAR_HEIGHT = mobileMenuOpen ? 80 : 80; 
+    const NAVBAR_HEIGHT = mobileMenuOpen ? 80 : 80;
     const y = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
 
     window.scrollTo({
@@ -89,7 +89,9 @@ const Navbar = () => {
       >
         <a href="#top" onClick={scrollToTop}>
           <h1 className="text-xl sm:text-2xl font-bold cursor-pointer text-gray-400 hover:text-[#27CBCB] transition-colors">
-            <pre className="text-base sm:text-lg md:text-xl">&lt;/aditya&gt;</pre>
+            <pre className="text-base sm:text-lg md:text-xl">
+              &lt;/ashish&gt;
+            </pre>
           </h1>
         </a>
         <div className="hidden md:flex items-center space-x-5 text-lg">
@@ -109,7 +111,7 @@ const Navbar = () => {
                   }
                 `}
               >
-                /{item}
+                {item}
                 <span
                   className={`absolute left-0 -bottom-1 h-0.5 bg-[#27CBCB]
                     transition-all duration-300
@@ -126,12 +128,32 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           )}
         </button>

@@ -16,7 +16,8 @@ const Footer = () => {
         >
           <div className="text-center space-y-2">
             <p className="text-xs text-gray-600 max-w-md">
-              Built with modern web technologies and a focus on clean and performant code
+              Built with modern web technologies and a focus on clean and
+              performant code
             </p>
           </div>
           <motion.div
@@ -27,11 +28,11 @@ const Footer = () => {
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500 animate-pulse" />
             <span>and</span>
             <Coffee className="w-4 h-4 text-amber-500" />
-            <span>by Aditya</span>
+            <span>by Ashish</span>
           </motion.div>
           <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-sm">
             <a
-              href="https://github.com/adityarajsrv"
+              href="https://github.com/ashishsahu0052/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-gray-300 transition-colors"
@@ -40,7 +41,7 @@ const Footer = () => {
             </a>
             <span className="text-gray-700 hidden sm:block">•</span>
             <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >
               Scroll to top

@@ -21,6 +21,10 @@ A sleek, responsive portfolio website showcasing projects, skills, and contact i
 - **Lucide React & React Icons** - Icon library
 - **Vite** - Fast build tool and development server
 
+## 🛠️ Live Display
+
+(https://github.com/ashishsahu0052/)
+
 ## 📁 Project Structure
 
 ```
@@ -79,18 +83,21 @@ PORTFOLIO/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/adityarajsrv/portfolio.git
+git clone https://github.com/ashishsahu0052/portfolio.git
 cd portfolio/frontend
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -98,6 +105,7 @@ yarn install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 # or
@@ -107,6 +115,7 @@ yarn dev
 4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ### Build for Production
+
 ```bash
 npm run build
 # or
@@ -160,8 +169,9 @@ If you find this project helpful or interesting, please consider giving it a sta
 
 ## 👨‍💻 Author
 
-**Aditya Raj Srivastava**
-- GitHub: [@adityarajsrv](https://github.com/adityarajsrv)
-- LinkedIn: [Aditya Raj Srivastava](https://www.linkedin.com/in/adityarajsrv)
+**Ashish Sahu**
+
+- GitHub: [@AshishSahu](https://github.com/ashishsahu0052/)
+- LinkedIn: [Ashish Sahu](https://www.linkedin.com/in/ashish-sahu-20a83033a/)
 
 ---

@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
-import careerquillImg from "../assets/careerquill.png";
+import picGuesser from "../assets/picguesser.png";
 import flowmindImg from "../assets/flowmind.png";
-import proctorlyImg from "../assets/proctorly.png";
-import hiremeImg from "../assets/hireme.png";
+import studentDashboard from "../assets/students.png";
+import retroGames from "../assets/retro.png";
 
 const projects = [
   {
-    title: "CareerQuill",
-    subtitle: "Resume Generation & ATS Scoring Platform",
+    title: "PicGuesser",
+    subtitle: "Multiplayer guessing game ",
     description:
-      "End-to-end resume builder with ATS scoring using NLP to match resumes against job descriptions and suggest keywords.",
+      "A multiplayer real-time guessing game where players draw and guess words in rooms, built with React, Socket.IO, and FastAPI.",
     highlights: [
-      "6 resume templates (PDF & DOCX)",
-      "NLP-based ATS scoring",
-      "JWT auth & resume versioning",
+      "multiplayer real-time gameplay",
+      "room creation & management",
+      "drawing and live chat features",
     ],
     tech: [
       "React",
@@ -26,14 +26,12 @@ const projects = [
       "Node.js",
       "Express",
       "MongoDB",
-      "Python",
+      "Socket.IO",
       "FastAPI",
-      "spaCy",
-      "scikit-learn",
     ],
-    github: "https://github.com/adityarajsrv/CareerQuill",
-    live: "https://career-quill-umber.vercel.app/",
-    image: careerquillImg,
+    github: "https://github.com/ashishsahu0052/PicGuesser",
+    live: "https://picguesser.vercel.app/",
+    image: picGuesser,
     accent: "from-[#27CBCB]/40",
   },
   {
@@ -62,43 +60,35 @@ const projects = [
     accent: "from-violet-400/40",
   },
   {
-    title: "Proctorly",
-    subtitle: "Real-Time Video Proctoring System",
+    title: "Smart student dashboard",
+    subtitle: "Toll provider for students ",
     description:
-      "Web-based proctoring system monitoring video, audio, and object detection to generate session integrity reports.",
+      "Web based student dashboard that provide tools like pdf converter, to do list , whiteboard , AI Chatbot and many more to help students to manage their day to day life.",
     highlights: [
-      "Face & object detection",
-      "Real-time event logging",
-      "PDF integrity reports",
+      "AI Chatbot for student queries",
+      "pdf making and downloading",
+      "whiteboard for writing and this.state.first",
     ],
-    tech: [
-      "React",
-      "Tailwind",
-      "MediaPipe",
-      "TensorFlow.js",
-      "Node.js",
-      "MongoDB",
-      "jsPDF",
-    ],
-    github: "https://github.com/adityarajsrv/Proctorly",
-    live: "https://proctorly-kappa.vercel.app",
-    image: proctorlyImg,
+    tech: ["HTML", "CSS", "JavaScript", "Firebase", "LocalStorage", "jsPDF"],
+    github: "https://github.com/ashishsahu0052/Smart-Student-Daashboard",
+    live: "https://smart-student-dashboardd.netlify.app/",
+    image: studentDashboard,
     accent: "from-amber-400/40",
   },
   {
-    title: "HireMe",
-    subtitle: "MERN Recruitment Platform Prototype",
+    title: "Retro Games",
+    subtitle: "Collection of classic games",
     description:
-      "Full-stack recruitment platform with secure authentication, profile management, and role-based access.",
+      "A collection of classic games like Snake, dragon run,rock paper scissor and cloudfly  with JavaScript and HTML5 Canvas, featuring smooth gameplay and responsive design.",
     highlights: [
-      "JWT auth & RBAC",
-      "Profile completion tracking",
-      "Cloudinary uploads",
+      "Free and easy to play",
+      "takes 1ms time  to load and play ",
+      "lightweight and responsive design",
     ],
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Cloudinary"],
-    github: "https://github.com/adityarajsrv/HireMe",
-    live: "https://hire-me-inky.vercel.app",
-    image: hiremeImg,
+    tech: ["JavaScript", "Tailwind css", "HTML", "CSS", "netlify"],
+    github: "https://github.com/ashishsahu0052/Retro_Games",
+    live: "https://retro-games-tan.vercel.app/",
+    image: retroGames,
     accent: "from-cyan-400/40",
   },
 ];
@@ -130,7 +120,9 @@ const ProjectCard = ({ project }) => {
           className={`absolute inset-0 bg-linear-to-r ${project.accent} to-transparent opacity-60`}
         />
         <div className="absolute bottom-3 left-4">
-          <h3 className="text-base sm:text-lg font-semibold text-white">{project.title}</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-white">
+            {project.title}
+          </h3>
           <p className="text-xs text-[#27CBCB]">{project.subtitle}</p>
         </div>
       </div>
@@ -142,7 +134,9 @@ const ProjectCard = ({ project }) => {
 
         <div className="flex flex-wrap gap-1 sm:gap-2 text-xs text-gray-400">
           {project.highlights.map((h) => (
-            <span key={h} className="text-xs">• {h}</span>
+            <span key={h} className="text-xs">
+              • {h}
+            </span>
           ))}
         </div>
 
@@ -208,7 +202,8 @@ const Projects = () => {
           Things I&apos;ve Built
         </h2>
         <p className="mt-2 text-[#80978F] text-base sm:text-lg max-w-xl text-center lg:text-left mx-auto lg:mx-0">
-          Real-world projects focused on system design, scalability, and clean engineering.
+          Real-world projects focused on system design, scalability, and clean
+          engineering.
         </p>
       </div>
 

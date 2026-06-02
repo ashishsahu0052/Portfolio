@@ -1,6 +1,7 @@
 import { ExternalLink, Send } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { MdOutlineMailOutline } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
@@ -87,7 +88,7 @@ const Contact = () => {
           <div className="mt-10 space-y-4">
             <motion.a
               whileHover={{ x: 6 }}
-              href="https://github.com/adityarajsrv"
+              href="https://github.com/ashishsahu0052/"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
             >
@@ -101,7 +102,7 @@ const Contact = () => {
 
             <motion.a
               whileHover={{ x: 6 }}
-              href="https://linkedin.com/in/adityarajsrv"
+              href="https://www.linkedin.com/in/ashish-sahu-20a83033a/"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
             >
@@ -114,19 +115,14 @@ const Contact = () => {
             </motion.a>
             <motion.a
               whileHover={{ x: 6 }}
-              href="https://contra.com/aditya_raj_srivastava_vgiys102?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=aditya_raj_srivastava_vgiys102"
-              target="_blank"
+              href="ashishsahu0052@gmail.com"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
             >
-              <div className="w-10 h-10 rounded-lg bg-white text-black flex items-center justify-center font-bold">
-                C
-              </div>
+              <MdOutlineMailOutline />
 
               <div>
-                <p className="font-medium text-gray-200">Contra</p>
-                <p className="text-sm text-gray-400">
-                  Hire me for freelance projects
-                </p>
+                <p className="font-medium text-gray-200">Email</p>
+                <p className="text-sm text-gray-400">Message me personally</p>
               </div>
 
               <ExternalLink className="ml-auto opacity-60" />

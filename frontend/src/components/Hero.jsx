@@ -21,8 +21,7 @@ const Hero = () => {
     >
       <p className="text-sm md:text-base lg:text-lg text-gray-400 font-mono">
         <span className="text-[#27CBCB]">const</span> developer ={" "}
-        <span className="text-gray-300">&quot;Aditya Raj Srivastava&quot;</span>
-        ;
+        <span className="text-gray-300">&quot;Ashish Sahu&quot;</span>;
       </p>
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
         Full-Stack Developer

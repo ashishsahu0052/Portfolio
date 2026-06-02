@@ -9,23 +9,26 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://portfolio-lilac-eight-33.vercel.app"
+  "https://portfolio-lilac-eight-33.vercel.app",
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
 
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    } else {
-      return callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-}));
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
+console.log(process.env.RESEND_API_KEY);
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -33,9 +36,9 @@ app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    await resend.emails.send({
+    const data = await resend.emails.send({
       from: "Portfolio Contact <Portfolio@resend.dev>",
-      to: "adityarajsrvofficial@gmail.com",
+      to: "sbashish00522@gmail.com",
       subject: `New Contact Message from ${name}`,
       reply_to: email,
       html: `
@@ -45,6 +48,7 @@ app.post("/send-email", async (req, res) => {
         <p>${message}</p>
       `,
     });
+    console.log(data);
 
     res.json({ success: true });
   } catch (err) {

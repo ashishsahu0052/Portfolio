@@ -19,11 +19,14 @@ import {
   SiVercel,
   SiRender,
   SiFastapi,
+  SiSocketdotio,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaAws } from "react-icons/fa6";
+import { FaBootstrap } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const categories = {
   frontend: [
@@ -32,6 +35,7 @@ const categories = {
     { name: "JavaScript", icon: <RiJavascriptFill /> },
     { name: "React", icon: <FaReact /> },
     { name: "Tailwind", icon: <SiTailwindcss /> },
+    { name: "Bootstrap", icon: <FaBootstrap /> },
   ],
   backend: [
     { name: "Node.js", icon: <FaNodeJs /> },
@@ -39,10 +43,12 @@ const categories = {
     { name: "REST APIs", icon: <TbApi /> },
     { name: "JWT Auth", icon: <MdSecurity /> },
     { name: "FastAPI", icon: <SiFastapi /> },
+    { name: "Socket.IO", icon: <SiSocketdotio /> },
   ],
   database: [
     { name: "MongoDB", icon: <SiMongodb /> },
     { name: "MySQL", icon: <SiMysql /> },
+    { name: "Postgre SQL", icon: <BiLogoPostgresql /> },
   ],
   devops: [
     { name: "GitHub", icon: <FaGitAlt /> },
@@ -73,7 +79,9 @@ const Stack = () => {
       <span className="text-xl text-gray-400 group-hover:text-[#27CBCB] transition-colors">
         {tech.icon}
       </span>
-      <span className="text-sm sm:text-md font-medium text-gray-200">{tech.name}</span>
+      <span className="text-sm sm:text-md font-medium text-gray-200">
+        {tech.name}
+      </span>
     </motion.div>
   );
 
@@ -87,7 +95,9 @@ const Stack = () => {
     >
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-0">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#27CBCB] text-center lg:text-left">My Tech Stack</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#27CBCB] text-center lg:text-left">
+            My Tech Stack
+          </h2>
           <p className="text-[#80978F] text-base sm:text-lg mt-2 text-center lg:text-left">
             The technologies I reach for most often - each chosen with purpose
           </p>

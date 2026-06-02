@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfileCard from "./ui/ProfileCard";
-import profileImg from "../assets/profile.png";
-import profile from "../assets/passport_size.jpg";
+import profileImg from "../assets/profilepic1.png";
+import profile from "../assets/profilepic2.png";
 import { X, Download, ExternalLink } from "lucide-react";
 
 const container = {
@@ -28,8 +28,8 @@ const About = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
-    link.download = "Aditya_Raj_Srivastava_Resume.pdf";
+    link.href = "/Ashish_Sahu_Resume.pdf";
+    link.download = "Ashish_Sahu.pdf";
     link.click();
   };
 
@@ -39,7 +39,7 @@ const About = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="flex flex-col lg:flex-row justify-between items-center lg:items-start px-4 sm:px-6 md:px-8 lg:ml-65 lg:p-5 space-y-8 lg:space-y-0 lg:space-x-8"
       >
         <motion.div
@@ -49,14 +49,15 @@ const About = () => {
           className="w-full max-w-md lg:max-w-none"
         >
           <ProfileCard
-            name="Aditya Raj Srivastava"
+            name="Ashish Sahu"
             title="Full-Stack Developer"
-            handle="adityarajsrv"
-            status="Final Year Student"
+            handle="ashishsahu"
+            status="Third Year Student"
             contactText="Let's Connect"
             miniAvatarUrl={profile}
             avatarUrl={profileImg}
             showUserInfo
+            linkedinUrl="https://www.linkedin.com/in/ashish-sahu-20a83033a/"
             enableTilt
             enableMobileTilt={false}
             location="India"
@@ -106,7 +107,10 @@ const About = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="space-y-3"
           >
-            <motion.h3 variants={fadeUp} className="text-lg text-[#80978F] text-center lg:text-left">
+            <motion.h3
+              variants={fadeUp}
+              className="text-lg text-[#80978F] text-center lg:text-left"
+            >
               Interests
             </motion.h3>
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
@@ -123,7 +127,9 @@ const About = () => {
                   className="flex items-center"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#27CBCB] mr-2" />
-                  <span className="text-xs sm:text-sm text-gray-400">{item}</span>
+                  <span className="text-xs sm:text-sm text-gray-400">
+                    {item}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -161,10 +167,12 @@ const About = () => {
               className="bg-[#101318] rounded-2xl w-full max-w-6xl h-[90vh] border border-gray-800 overflow-hidden"
             >
               <div className="flex justify-between items-center p-4 sm:p-6 border-b border-gray-800">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#27CBCB]">Resume</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#27CBCB]">
+                  Resume
+                </h3>
                 <div className="flex gap-2 sm:gap-3">
                   <a
-                    href="/Resume.pdf"
+                    href="/Ashish_Sahu_Resume.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="p-2 sm:px-4 sm:py-2 bg-gray-800 rounded-lg hover:bg-gray-700"
@@ -186,7 +194,7 @@ const About = () => {
                 </div>
               </div>
               <iframe
-                src="/Resume.pdf"
+                src="/Ashish_Sahu_Resume.pdf"
                 className="w-full h-[calc(90vh-80px)] sm:h-[calc(90vh-88px)] bg-white"
                 title="Resume"
               />
