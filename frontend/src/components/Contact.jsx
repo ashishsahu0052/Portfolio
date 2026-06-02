@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useState, useEffect } from "react";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+console.log("API Base URL:", API_BASE);
 
 const fade = {
   hidden: { opacity: 0, y: 25 },
@@ -122,7 +123,7 @@ const Contact = () => {
 
               <div>
                 <p className="font-medium text-gray-200">Email</p>
-                <p className="text-sm text-gray-400">Message me personally</p>
+                <p className="text-sm text-gray-400">Message me personally </p>
               </div>
 
               <ExternalLink className="ml-auto opacity-60" />
