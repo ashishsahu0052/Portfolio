@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   res.send("Server is running");
 });
 app.use(express.json());
-console.log(process.env.RESEND_API_KEY);
+//console.log(process.env.RESEND_API_KEY);
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -51,7 +51,7 @@ app.post("/send-email", async (req, res) => {
         <p>${message}</p>
       `,
     });
-    // console.log(data);
+    console.log("Resend Response:", data);
 
     res.json({ success: true });
   } catch (err) {
