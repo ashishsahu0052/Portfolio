@@ -224,7 +224,7 @@ const Projects = () => {
 
       <div className="flex justify-center text-[#27CBCB]">
         <a
-          href="https://github.com/adityarajsrv"
+          href="https://github.com/ashishsahu0052"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 group"
